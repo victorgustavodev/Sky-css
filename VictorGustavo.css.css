@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#background {
+  background: linear-gradient(
+    180deg,
+    rgba(135, 206, 235, 1) 30%,
+    rgba(173, 216, 230, 1) 60%,
+    rgba(240, 248, 255, 1) 100%
+  );
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 99;
+  position: absolute;
+  /* transition: all 2s; */
+}
+
+#moon {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background-color: #f6f3c6;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+#moon1 {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 550px;
+  background-color: #ffffff42;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+#moon2 {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background-color: #ffffff44;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.montain-1 {
+  background-color: #323232;
+  width: 100%;
+  height: 100%;
+  transform: rotate(10deg);
+  position: absolute;
+  top: 600px;
+  left: -200px;
+  z-index: 99;
+}
+
+.montain-2 {
+  background-color: #323232;
+  width: 100%;
+  height: 100%;
+  transform: rotate(350deg);
+  position: absolute;
+  top: 600px;
+  right: -200px;
+  z-index: 99;
+}
+
+.small-tress {
+  z-index: 99999;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 150px solid #323232;
+  z-index: 99;
+}
+
+.big-tress {
+  position: absolute;
+  bottom: 40vh;
+  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-bottom: 200px solid #323232;
+  z-index: 99;
+}
+
+@keyframes fly1 {
+  0% {
+    transform: translateX(-30vw) translateY(-10vh) rotate(-20deg);
+  }
+  50% {
+    transform: translateX(10vw) translateY(-30vh) rotate(10deg);
+  }
+  100% {
+    transform: translateX(120vw) translateY(-15vh) rotate(30deg);
+  }
+}
+
+@keyframes fly2 {
+  0% {
+    transform: translateX(-20vw) translateY(-15vh) rotate(-10deg);
+  }
+  50% {
+    transform: translateX(20vw) translateY(-20vh) rotate(15deg);
+  }
+  100% {
+    transform: translateX(110vw) translateY(-8vh) rotate(5deg);
+  }
+}
+
+@keyframes fly3 {
+  0% {
+    transform: translateX(-10vw) translateY(-20vh) rotate(-15deg);
+  }
+  50% {
+    transform: translateX(15vw) translateY(-35vh) rotate(5deg);
+  }
+  100% {
+    transform: translateX(110vw) translateY(-10vh) rotate(15deg);
+  }
+}
+
+@keyframes fly4 {
+  0% {
+    transform: translateX(-40vw) translateY(-25vh) rotate(-25deg);
+  }
+  50% {
+    transform: translateX(25vw) translateY(-40vh) rotate(0deg);
+  }
+  100% {
+    transform: translateX(120vw) translateY(-15vh) rotate(30deg);
+  }
+}
+
+#bird,
+#bird4,
+#bird5,
+#bird6,
+#bird7 {
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+#bird1,
+#bird2,
+#bird3 {
+  width: 65px;
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+#bird {
+  animation: fly1 8s linear infinite;
+}
+
+#bird1 {
+  animation: fly1 10s linear infinite;
+}
+
+#bird2 {
+  animation: fly3 12s linear infinite;
+}
+
+#bird3 {
+  animation: fly4 14s linear infinite;
+}
+
+#bird4 {
+  animation: fly1 9s linear infinite;
+}
+
+#bird5 {
+  animation: fly2 11s linear infinite;
+}
+
+#bird6 {
+  animation: fly3 13s linear infinite;
+}
+
+#bird7 {
+  animation: fly4 15s linear infinite;
+}
+
+.star {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.575);
+  border-radius: 100%;
+  animation: twinkle 1.5s infinite alternate;
+  transition: opacity 0.1s ease;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes meteoroAnimacao {
+  0% {
+    top: 70px;
+    right: -20%;
+    visibility: visible;
+  }
+
+  50% {
+    top: 70px;
+    right: 1%;
+    visibility: visible;
+  }
+
+  100% {
+    top: 70px;
+    right: -20%;
+    visibility: visible;
+  }
+}
+
+#meteor {
+  position: absolute;
+  top: 100px;
+  right: -100px;
+  visibility: hidden;
+  width: 500px;
+  transform: rotate(180deg);
+  animation: 8s ease-in forwards;
+  cursor: pointer;
+  border: 0px;
+}
+
